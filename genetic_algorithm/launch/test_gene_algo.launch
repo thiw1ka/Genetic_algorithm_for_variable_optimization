@@ -1,0 +1,26 @@
+<!-- 
+    This launchfile lauches genetic algorithem 
+
+
+
+author: Thivanka Perera thiva@uri.edu
+-->
+<launch>
+    <rosparam   command     = "load"     
+                subst_value = "true" 
+                file        = "$(find genetic_algorithm)/launch/params.yaml"
+    />
+    <param name = "Population_size"             type = "int"    value="10" />
+    <param name = "top_selection_percentage"    type = "int"    value="10" />
+    <param name = "mutating_percentage"         type = "int"    value="10" />
+    <param name = "crossover_percentage"        type = "int"    value="10" />
+
+    <node
+        name        = "genetic_algorithm_test"
+        pkg         = "genetic_algorithm"   
+        type        = "genetic_algorithm_test"
+        output      = "screen"
+        required    = "true"
+    />
+</launch>
+

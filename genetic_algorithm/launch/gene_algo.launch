@@ -1,0 +1,34 @@
+<!-- 
+    This launchfile lauches genetic algorithem 
+
+
+
+author: Thivanka Perera thiva@uri.edu
+-->
+<launch>
+    <rosparam   command     = "load"     
+                subst_value = "true"
+                file        = "$(find genetic_algorithm)/launch/params.yaml"
+    />
+    <param name = "Population_size"             type = "int"    value="30" />
+    <param name = "top_selection_percentage"    type = "int"    value="20" />
+    <param name = "mutating_percentage"         type = "int"    value="30" />
+    <param name = "crossover_percentage"        type = "int"    value="30" />
+
+    <node
+        name        = "genetic_algorithm_node"
+        pkg         = "genetic_algorithm"   
+        type        = "genetic_algorithm_node"
+        output      = "log"
+        required    = "true"
+    />
+
+    <!-- gui for the filter -->
+    <node   name     = "Filter_User_Interface" 	
+            pkg      = "cyanob_phd_filter_sabbatus"
+            type     = "gui.py"
+            required = "false"
+    />
+
+</launch>
+

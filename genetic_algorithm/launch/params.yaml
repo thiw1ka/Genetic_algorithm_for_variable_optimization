@@ -1,0 +1,7 @@
+# System params
+
+RESULT_DIR: $(env HOME)/catkin_ws/src/uri_soft_wip/cyanobloom_sabbatus/results/filter_output/
+GROUND_TRUTH_DIR: $(env HOME)/catkin_ws/src/uri_soft_wip/cyanobloom_sabbatus/Data_files/2021_simulation/1.groundtruth_blocations/bloom_coordinates_northeast_wind_drift/
+ROSBAG_DIR_: $(env HOME)/catkin_ws/src/uri_soft_wip/cyanobloom_sabbatus/Data_files/2021_simulation/2.Rosbags/2022-03-25-11-58-13_NEwind.bag
+INITAL_PATICLE_LIST_DIR_: $(env HOME)/catkin_ws/src/uri_soft_wip/cyanobloom_sabbatus/results/initial_particle_lists/
+MAX_POPUL_TO_TEST: 100
